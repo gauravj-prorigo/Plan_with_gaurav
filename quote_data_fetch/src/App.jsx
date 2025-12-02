@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useRef } from "react"
+import { useRef } from "react";
 import "./App.css";
 import Quote from "./components/Quote";
 function App() {
@@ -7,7 +7,7 @@ function App() {
   const [quote, setquote] = useState([]);
   const [loading, setLoading] = useState(false);
   const [loadingimg, setLoadingimg] = useState(false);
-    const ref = useRef(null)
+  const ref = useRef(null);
   // async function handleonclcikimg() {
   //   setLoadingimg(true);
   //   try {
@@ -25,7 +25,6 @@ function App() {
   //   console.log("image is ", img);
   // }
   async function handleonclcik() {
-
     setLoading(true);
     try {
       const data = await fetch("/zenquotes/api/random");
@@ -35,18 +34,15 @@ function App() {
       const response = await data.json();
       console.log(response);
       setquote(response);
-    
     } catch (err) {
       console.log("the error is ", err);
     }
     setLoading(false);
-
-    
   }
   return (
     <>
       <div>
-        {/* <button onClick={handleonclcikimg}>clcik me to faech data</button> */}
+        <button onClick={handleonclcikimg}>clcik me to faech data</button>
 
         {/* <div>
           {loadingimg ? (

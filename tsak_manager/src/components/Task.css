@@ -1,0 +1,40 @@
+.main-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid rgb(221, 175, 175);
+  border-radius: 6px;
+  width: 420px;
+  min-height: 250px;
+  padding: 15px 5px;
+}
+
+.input input {
+  padding: 6px 5px;
+  margin: 5px;
+}
+.btn{
+  padding: 8px 18px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: aliceblue;
+  font-weight: bold;
+}
+
+.list {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.list li {
+  list-style: none;
+}
+
+.li{
+    display: flex;
+    gap: 20px;
+}

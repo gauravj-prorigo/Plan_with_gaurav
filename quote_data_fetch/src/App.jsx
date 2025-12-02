@@ -42,7 +42,7 @@ function App() {
   return (
     <>
       <div>
-        <button onClick={handleonclcikimg}>clcik me to faech data</button>
+        {/* <button onClick={handleonclcikimg}>clcik me to faech data</button> */}
 
         {/* <div>
           {loadingimg ? (

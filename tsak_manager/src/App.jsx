@@ -5,7 +5,7 @@ import Counter from "./components/Counter";
 
 function App() {
   const [task, setTask] = useState([]);
-  const [show ,setshow] = useState(false)
+  const [show, setshow] = useState(false);
 
   function handledelte(id) {
     console.log(id);
@@ -14,10 +14,12 @@ function App() {
 
   return (
     <div>
-      <button onClick={()=> setshow(!show)} className="btn">Show Counter</button>
+      <button onClick={() => setshow(!show)} className="btn">
+        Show Counter
+      </button>
       <h1>Task Tracker</h1>
       <Task task={task} setTask={setTask} handledelte={handledelte}></Task>
-      {show ? <Counter/> : null}
+      {show ? <Counter /> : null}
     </div>
   );
 }

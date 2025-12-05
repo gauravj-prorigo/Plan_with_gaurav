@@ -1,57 +1,108 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-
+import { useContext } from "react";
+import { theamcontext } from "../context";
+import { RiseLoader } from "react-spinners";
+import Form from "./Form";
 function User() {
   const [data, setdata] = useState([]);
+  const [loading, setloading] = useState(false);
+  const { theme } = useContext(theamcontext);
   async function fetchuser() {
     try {
+      setloading(true);
       const response = await fetch(
-        "https://jsonplaceholder.typicode.com/users"
+        "https://69329d23e5a9e342d2700388.mockapi.io/users/users"
       );
-      console.log("response is ", response);
-      const data = await response.json();
-      console.log("response is from data ", data);
-      setdata(data);
       if (!response.ok) {
         console.log("error from api");
       }
+      // console.log("response is ", response);
+      const data = await response.json();
+      // console.log("response is from data ", data);
+      setdata(data);
     } catch (e) {
       console.log("error", e);
     }
+    setloading(false);
   }
 
   useEffect(() => {
     fetchuser();
   }, []);
   return (
-    <div style={{ padding: "20px",display:'flex', flexDirection:'column',  alignItems:'self-start' ,width:'400px'}}>
-      <h2 style={{ marginBottom: "20px" }}>List of user</h2>
-
-      <div style={{width:'100%'}}>
-        {data.map((user) => (
-          <NavLink
-            key={user.id}
-            to={`/user/${user.id}`}
-            style={{
-              textDecoration: "none",
-              color: "black",
-              display: "block",
-              marginBottom: "10px",
-            }}
-          >
-            <li
+    <div
+      style={{
+        padding: "20px",
+        display: "flex",
+        alignItems: "center",
+        color: theme === "light" ? "black" : "white",
+        justifyContent:'space-around'
+      }}
+    >
+      {loading ? (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100vh",
+          }}
+        >
+          <RiseLoader size={20} color="blue" />
+        </div>
+      ) : (
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: "50px",
+            border: "2px solid gray ",
+            borderRadius:'5px',
+            padding:'5px 20px'
+          }}
+        >
+          <h2 style={{ marginBottom: "20px" }}>List of user</h2>
+          {data.map((user) => (
+            <NavLink
+              key={user.id}
+              to={`/user/${user.id}`}
+              state={{ data }}
               style={{
-                listStyle: "none",
-                padding: "10px",
-                border: "1px solid #ccc",
-                borderRadius: "6px",
-                cursor: "pointer",
+                textDecoration: "none",
+                color: theme === "light" ? "black" : "white",
+                marginBottom: "10px",
               }}
             >
-              {user.name}
-            </li>
-          </NavLink>
-        ))}
+              <li
+                style={{
+                  listStyle: "none",
+                  padding: "10px 20px",
+                  border: "1px solid #ccc",
+                  borderRadius: "6px",
+                  cursor: "pointer",
+                  margin: "5px",
+                  width: "350px",
+                }}
+              >
+                {user.Firtsname}
+              </li>
+            </NavLink>
+          ))}
+        </div>
+      )}
+      <div
+        style={{
+          width: "30%",
+          border: "2px solid gray",
+          padding: "10px 20px",
+          marginTop: "50px",
+          borderRadius: "5px",
+        }}
+      >
+        <Form />
       </div>
     </div>
   );

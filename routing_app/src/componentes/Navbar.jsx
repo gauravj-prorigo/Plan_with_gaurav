@@ -50,6 +50,17 @@ function Navbar() {
             User
           </NavLink>
         </li>
+          <li>
+          <NavLink
+            to="/userform"
+            style={{
+              textDecoration: "none",
+              color: theme === "light" ? "black" : "white",
+            }}
+          >
+            Add User
+          </NavLink>
+        </li>
         <li>
           <NavLink
             to="/setting"

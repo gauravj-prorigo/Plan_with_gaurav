@@ -91,7 +91,11 @@ function User() {
                     width: "350px",
                   }}
                 >
+<<<<<<< HEAD
                   {user.Firtsname +" "+ user.Lastname}
+=======
+                  {user.Firtsname}
+>>>>>>> 8fe0870497c61c9a71323e6b507118ae8bab62be
                 </li>
               </NavLink>
             ))

@@ -63,7 +63,11 @@ function UserProfile() {
   // console.log(data);
 
   // // console.log("current user is " ,location.state.data)
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 8fe0870497c61c9a71323e6b507118ae8bab62be
   return (
     <div
       className="wrapper"

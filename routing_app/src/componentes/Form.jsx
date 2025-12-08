@@ -57,7 +57,11 @@ function Form() {
 
   useEffect(() => {
     if (id) {
+<<<<<<< HEAD
       console.log("id is here ", id);
+=======
+      console.log("id is here ",id);
+>>>>>>> 8fe0870497c61c9a71323e6b507118ae8bab62be
       async function fetchdata() {
         try {
           const response = await fetch(

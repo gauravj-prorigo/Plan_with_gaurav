@@ -12,7 +12,7 @@ function Layout() {
           height: "100vh",
           backgroundColor: theme === "light" ? "white" : "#808080",
           paddingTop: "60px",
-          overflow: "hidden",
+          overflow: "overlay",
         }}
       >
         <Outlet />

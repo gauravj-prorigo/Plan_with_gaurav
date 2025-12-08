@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { useContext } from "react";
 import { theamcontext } from "../context";
 import { RiseLoader } from "react-spinners";
@@ -8,6 +8,7 @@ function User() {
   const [data, setdata] = useState([]);
   const [loading, setloading] = useState(false);
   const { theme } = useContext(theamcontext);
+  const { userid } = useParams();
   async function fetchuser() {
     try {
       setloading(true);
@@ -37,7 +38,7 @@ function User() {
         display: "flex",
         alignItems: "center",
         color: theme === "light" ? "black" : "white",
-        justifyContent:'space-around'
+        justifyContent: "space-around",
       }}
     >
       {loading ? (
@@ -59,41 +60,45 @@ function User() {
             justifyContent: "center",
             alignItems: "center",
             marginTop: "50px",
-            border: "2px solid gray ",
-            borderRadius:'5px',
-            padding:'5px 20px'
+            border: theme === "light" ? "2px solid gray" : "2px solid white",
+            borderRadius: "5px",
+            padding: "5px 20px",
           }}
         >
           <h2 style={{ marginBottom: "20px" }}>List of user</h2>
-          {data.map((user) => (
-            <NavLink
-              key={user.id}
-              to={`/user/${user.id}`}
-              state={{ data }}
-              style={{
-                textDecoration: "none",
-                color: theme === "light" ? "black" : "white",
-                marginBottom: "10px",
-              }}
-            >
-              <li
+          {data.length === 0 ? (
+            <h2>No user</h2>
+          ) : (
+            data.map((user) => (
+              <NavLink
+                key={user.id}
+                to={`/user/${user.id}`}
+                state={{ data }}
                 style={{
-                  listStyle: "none",
-                  padding: "10px 20px",
-                  border: "1px solid #ccc",
-                  borderRadius: "6px",
-                  cursor: "pointer",
-                  margin: "5px",
-                  width: "350px",
+                  textDecoration: "none",
+                  color: theme === "light" ? "black" : "white",
+                  marginBottom: "10px",
                 }}
               >
-                {user.Firtsname}
-              </li>
-            </NavLink>
-          ))}
+                <li
+                  style={{
+                    listStyle: "none",
+                    padding: "10px 20px",
+                    border: "1px solid #ccc",
+                    borderRadius: "6px",
+                    cursor: "pointer",
+                    margin: "5px",
+                    width: "350px",
+                  }}
+                >
+                  {user.Firtsname +" "+ user.Lastname}
+                </li>
+              </NavLink>
+            ))
+          )}
         </div>
       )}
-      <div
+      {/* <div
         style={{
           width: "30%",
           border: "2px solid gray",
@@ -102,8 +107,8 @@ function User() {
           borderRadius: "5px",
         }}
       >
-        <Form />
-      </div>
+        <Form id = {userid}/>
+      </div> */}
     </div>
   );
 }

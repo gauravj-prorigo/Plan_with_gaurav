@@ -13,7 +13,6 @@ function Home() {
         width: "100vw",
         height: "100vh",
         color: theme === "light" ? "black" : "white",
-     
       }}
     >
       <div
@@ -24,7 +23,7 @@ function Home() {
           flexDirection: "column",
           border: theme === "light" ? "2px solid black" : "2px solid white",
           padding: "20px 30px",
-          borderRadius:'5px'
+          borderRadius: "5px",
         }}
       >
         <h2>Home page Under Devlopment</h2>

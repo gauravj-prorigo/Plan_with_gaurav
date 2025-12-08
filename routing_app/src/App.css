@@ -48,6 +48,67 @@
  width: fit-content;
  margin-top: 50px;
  height: fit-content;
+ /* width: 400px; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-user-Dark{
+  border: 2px solid rgb(208, 200, 200);
+  padding: 20px 30px;
+  border-radius: 5px;
+ width: fit-content;
+ margin-top: 50px;
+ height: fit-content;
+ /* width: 400px; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.sub-user{
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
+
+}
+
+.sub-user-Dark{
+  color: rgb(246, 239, 239);
+  font-size: 24px;
+  font-weight: 600;
+
+}
+
+.main-user p{
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  gap: 10px;
+}
+
+.main-user-Dark p{
+  color: rgb(255, 246, 246);
+  font-size: 18px;
+  font-weight: 500;
+  gap: 10px;
+}
+
+
+.main-user-Dark{
+  border: 2px solid rgb(208, 200, 200);
+  padding: 20px 30px;
+  border-radius: 5px;
+ width: fit-content;
+ margin-top: 50px;
+ height: fit-content;
+  
 }
 
 .user-list{
@@ -56,22 +117,25 @@
   text-decoration: none;
 }
 
-/* Light Theme */
+
 .form {
   color: #222;
-  padding: 20px;
+  padding: 30px;
   width: 350px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border: 2px solid gray,
 }
 
 .form input {
   padding: 10px;
+  color: #333;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 14px;
+  background-color: #fff;
 }
 
 .form p {
@@ -79,15 +143,15 @@
   font-size: 12px;
 }
 
-/* Dark Theme */
 .formd {
   color: #f1f1f1;
-  padding: 20px;
+  padding: 30px;
   width: 350px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border: 2px solid white,
 }
 
 .formd input {
@@ -96,9 +160,21 @@
   color: #fff;
   border-radius: 6px;
   font-size: 14px;
+  background-color: #333;
 }
 
 .formd p {
   color: #ff6b6b;
   font-size: 12px;
 }
+
+.buttons {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #646cff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+

@@ -12,6 +12,7 @@ const UserInput = ({ city, setcity, fetchweather }) => {
       seterror("");
     }
     fetchweather();
+    setcity("")
   }
   return (
     <div className="input-main">

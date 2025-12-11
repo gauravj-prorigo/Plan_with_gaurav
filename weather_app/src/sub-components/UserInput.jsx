@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./UserInput.css";
 import { IoSearch } from "react-icons/io5";
 
-const UserInput = ({ city, setcity, fetchweather }) => {
+const UserInput = ({ city, setcity, fetchcurrentweather }) => {
   const [error, seterror] = useState("");
   function handlesubmit() {
 
@@ -11,7 +11,7 @@ const UserInput = ({ city, setcity, fetchweather }) => {
     } else {
       seterror("");
     }
-    fetchweather();
+    fetchcurrentweather(`https://api.weatherapi.com/v1/current.json?key=556769fc1cee4f978b9175318250712&q=${city}&aqi=no`);
     setcity("")
   }
   return (

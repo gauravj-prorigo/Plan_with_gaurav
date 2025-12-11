@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./WeatherDetails.css";
 import { WiDayCloudyWindy, WiHumidity } from "react-icons/wi";
 import { FaTemperatureLow } from "react-icons/fa";
@@ -6,6 +6,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../context/Themecontext";
 const WeatherDetails = ({ data }) => {
   const { theme, toggletheme, setTheme } = useContext(ThemeContext);
+    console.log("weather is rendring")
   return (
     <div
       className={
@@ -18,8 +19,8 @@ const WeatherDetails = ({ data }) => {
     >
       <div className={"cards"}>
         <div className="card card-wind">
-          <h1 className="icon">
-            <WiDayCloudyWindy />
+          <h1>
+            <WiDayCloudyWindy className="icon" />
           </h1>
           <h3>Wind</h3>
           <p>Speed: {data?.current?.wind_kph} kph</p>
@@ -29,8 +30,8 @@ const WeatherDetails = ({ data }) => {
         </div>
 
         <div className="card card-temp">
-          <h1 className="icon">
-            <FaTemperatureLow />
+          <h1>
+            <FaTemperatureLow className="icon temp" />
           </h1>
           <h2>
             {data?.location?.name} {data?.location?.region}
@@ -42,8 +43,8 @@ const WeatherDetails = ({ data }) => {
         </div>
 
         <div className="card card-humidity">
-          <h1 className="icon">
-            <WiHumidity />
+          <h1>
+            <WiHumidity className="icon" />
           </h1>
           <h3>Humidity & More</h3>
           <p>Humidity: {data?.current?.humidity}%</p>
@@ -55,4 +56,4 @@ const WeatherDetails = ({ data }) => {
   );
 };
 
-export default WeatherDetails;
+export default memo(WeatherDetails) ;

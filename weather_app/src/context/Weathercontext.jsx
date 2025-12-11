@@ -4,8 +4,10 @@ import { createContext} from "react";
 export const WeatherAppContext = createContext();
 
 export function WeatherAppProvider({ children }) {
+
   const [city, setcity] = useState('');
   const [data, setdata] = useState(null);
+                                                                                                      
     const [loading, setloading] = useState(false);
   async function fetchweather() {
     setloading(true)

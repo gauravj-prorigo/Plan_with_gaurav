@@ -5,11 +5,11 @@ import App from "./App.jsx";
 import { ThemeProvider } from "./context/Themecontext.jsx";
 import { ToastContainer } from "react-toastify";
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+
     <ThemeProvider>
       <App />
       <ToastContainer 
       autoClose={1000}/>
     </ThemeProvider>
-  </StrictMode>
+
 );

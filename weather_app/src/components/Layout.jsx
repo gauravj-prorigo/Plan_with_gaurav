@@ -5,7 +5,7 @@ import React, { useContext } from "react";
 import { ThemeContext } from "../context/Themecontext";
 import "./Layout.css"
 const Layout = () => {
-    const { theme, toggletheme, setTheme } = useContext(ThemeContext);
+    const { theme} = useContext(ThemeContext);
   return (
     <div className={theme === "light"
           ? "layout-container"
@@ -17,6 +17,7 @@ const Layout = () => {
       <main className="layout-content">
         <Outlet />
       </main>
+      
     </div>
   );
 };

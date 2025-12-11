@@ -2,34 +2,27 @@ import "./Home.css";
 import UserInput from "../sub-components/UserInput";
 import WeatherDetails from "../sub-components/WeatherDetails";
 import { useContext, useEffect } from "react";
-import { WeatherAppContext } from "../context/Weathercontext";
 import { RiseLoader } from "react-spinners";
-
 import { ThemeContext } from "../context/Themecontext";
 import { useWeather } from "../Hooks/useWeather";
 const Home = () => {
   const { theme } = useContext(ThemeContext);
-  // const {  } = useContext(WeatherAppContext);
-  const {
-    data,
-    city,
-    setdata,
-    fetchweather,
-    setcity,
-    loading,
-    fetchcurrentweather,
-  } = useWeather();
+  const { data, city, setcity, loading, fetchcurrentweather } = useWeather();
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function success(postion) {
-      const lat = postion.coords.latitude;
-      const lon = postion.coords.longitude;
-      fetchcurrentweather(lat, lon);
-    },
-    function err(){
-      console.log(err.message)
-    }
-  );
+    console.log("pune weather featch")
+    navigator.geolocation.getCurrentPosition(
+      function success(postion) {
+        const lat = postion.coords.latitude;
+        const lon = postion.coords.longitude;
+        fetchcurrentweather(
+          `https://api.weatherapi.com/v1/current.json?key=556769fc1cee4f978b9175318250712&q=${lat} ${lon}&aqi=no`
+        );
+      },
+      function err() {
+        console.log(err.message);
+      }
+    );
   }, []);
   return (
     <div className="main-wrapper">
@@ -45,7 +38,11 @@ const Home = () => {
         Weather App
       </h1>
       <div className="main">
-        <UserInput city={city} setcity={setcity} fetchweather={fetchweather} />
+        <UserInput
+          city={city}
+          setcity={setcity}
+          fetchcurrentweather={fetchcurrentweather}
+        />
         {loading ? <RiseLoader /> : <WeatherDetails data={data} />}
       </div>
     </div>

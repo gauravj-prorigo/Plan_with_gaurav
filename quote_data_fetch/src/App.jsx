@@ -7,7 +7,6 @@ function App() {
   const [quote, setquote] = useState([]);
   const [loading, setLoading] = useState(false);
   const [loadingimg, setLoadingimg] = useState(false);
-  const ref = useRef(null);
   // async function handleonclcikimg() {
   //   setLoadingimg(true);
   //   try {
@@ -31,8 +30,9 @@ function App() {
       if (!data.ok) {
         console.log("error from server");
       }
+      console.log("data from quote api",data)
       const response = await data.json();
-      console.log(response);
+      // console.log(response);
       setquote(response);
     } catch (err) {
       console.log("the error is ", err);
@@ -52,11 +52,11 @@ function App() {
           )}
         </div> */}
         <div>
-          <button onClick={handleonclcik}>clcik me to faech Quote</button>
+          <button onClick={handleonclcik}>clcik me to for Quote</button>
           {loading ? (
             <h2>Loading ............</h2>
           ) : (
-            <Quote quote={quote} ref={ref}></Quote>
+            <Quote quote={quote}></Quote>
           )}
         </div>
       </div>

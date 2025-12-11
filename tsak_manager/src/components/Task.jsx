@@ -1,22 +1,10 @@
-import { useState } from "react";
+
 import "./Task.css";
+import TaskInput from "./TaskInput";
 function Task(props) {
   let num = 1;
-  const [inputval, setInput] = useState("");
-  function handlinput() {
-    if (inputval.length <= 0) {
-      return;
-    }
-    props.setTask([...props.task, { task: inputval, check: false }]);
-    setInput("");
-  }
-
-  function handleinputchange(event) {
-    setInput(event.target.value);
-  }
-
   function handlecheck(i) {
-    let copyarray = [...props.task];
+    let copyarray = props.task.map((task) => ({ ...task }));
     copyarray[i].check = !copyarray[i].check;
     console.log(props.task);
     props.setTask(copyarray);
@@ -24,17 +12,9 @@ function Task(props) {
 
   return (
     <div className="main-container">
-      <div className="input">
-        <input
-          type="text"
-          value={inputval}
-          onChange={(e) => handleinputchange(e)}
-          placeholder="Add tasks......"
-        />
-        <button className="btn" onClick={handlinput}>
-          Add
-        </button>
-      </div>
+
+        <TaskInput {...props}/>
+
       <div>
         {props.task.map((t, index) => (
           <div className="list">

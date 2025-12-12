@@ -1,0 +1,35 @@
+
+.skeleton h1,
+.skeleton h3,
+.skeleton p {
+  background: #726e6e;
+  border-radius: 6px;
+}
+
+.skeleton h1 {
+  height: 24px;
+  width: 60%;
+  width: 40px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+}
+
+.skeleton h3 {
+  height: 20px;
+  width: 40%;
+  margin-bottom: 16px;
+}
+
+.skeleton p {
+  height: 14px;
+  width: 70%;
+  margin-bottom: 12px;
+}
+
+.skel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     background: #4947475e;
+}

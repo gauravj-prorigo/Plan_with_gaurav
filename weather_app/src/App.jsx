@@ -1,9 +1,13 @@
-
+import { lazy } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./components/Layout";
-import Home from "./components/Home";
-import About from "./components/About";
+// import Layout from "./components/Layout";
+// import Home from "./components/Home";
+// import  About from "./components/About";
+const About = lazy(() => import("./components/About"));
+const Home = lazy(() => import("./components/Home"));
+const Layout = lazy(() => import("./components/Layout"));
 import Setting from "./components/Setting";
+
 export default function App() {
   const routes = createBrowserRouter([
     {

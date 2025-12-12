@@ -30,26 +30,26 @@ export function useWeather() {
     console.log("First");
     try {
       const res = await fetch(url);
-      await new Promise((resolve, reject) => {
-        return setTimeout(resolve, 1000);
-      });
-      if (!res.ok) {
+      await new Promise((resolve, reject) => setTimeout(resolve, 1000));
+      if (!res.ok) {0
+        toast.error("Give Correct City name");
         throw new Error("Failed to fetch weather data");
       }
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
 
       setdata(data);
       toast.success("Weather featch sucessfully ");
-      console.log("Second");
+      // console.log("Second");
     } catch (err) {
       console.log(err);
-    } finally {
-      console.log("third");
     }
-    console.log("Fourth");
+    // } finally {
+    //   console.log("third");
+    // }
+    // console.log("Fourth");
     setloading(false);
-    console.log("Fifth");
+    // console.log("Fifth");
   }
   return { city, setcity, data, setdata, loading, fetchcurrentweather };
 }

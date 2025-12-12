@@ -1,16 +1,19 @@
 import "./Home.css";
 import UserInput from "../sub-components/UserInput";
-import WeatherDetails from "../sub-components/WeatherDetails";
-import { useContext, useEffect } from "react";
+
+import { lazy, Suspense, useContext, useEffect } from "react";
 import { RiseLoader } from "react-spinners";
 import { ThemeContext } from "../context/Themecontext";
 import { useWeather } from "../Hooks/useWeather";
+import Skelton from "../skelton/Skelton";
+import WeatherDetails from "../sub-components/WeatherDetails"
+// const WeatherDetails = lazy(() => import("../sub-components/WeatherDetails"));
 const Home = () => {
   const { theme } = useContext(ThemeContext);
   const { data, city, setcity, loading, fetchcurrentweather } = useWeather();
 
   useEffect(() => {
-    console.log("pune weather featch")
+    console.log("pune weather featch");
     navigator.geolocation.getCurrentPosition(
       function success(postion) {
         const lat = postion.coords.latitude;
@@ -43,7 +46,15 @@ const Home = () => {
           setcity={setcity}
           fetchcurrentweather={fetchcurrentweather}
         />
-        {loading ? <RiseLoader /> : <WeatherDetails data={data} />}
+        {loading ? (
+          <Skelton />
+        ) : (
+          // <Suspense
+          //   fallback={<div style={{ minHeight: 120 }}>Loading details...</div>}
+          // >
+            <WeatherDetails data={data} />
+          // </Suspense>
+        )}
       </div>
     </div>
   );

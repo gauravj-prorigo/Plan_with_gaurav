@@ -4,6 +4,7 @@ import { WiDayCloudyWindy, WiHumidity } from "react-icons/wi";
 import { FaTemperatureLow } from "react-icons/fa";
 import { useContext } from "react";
 import { ThemeContext } from "../context/Themecontext";
+import Skeleton from "react-loading-skeleton";
 const WeatherDetails = ({ data }) => {
   const { theme, toggletheme, setTheme } = useContext(ThemeContext);
     console.log("weather is rendring")
@@ -23,7 +24,7 @@ const WeatherDetails = ({ data }) => {
             <WiDayCloudyWindy className="icon" />
           </h1>
           <h3>Wind</h3>
-          <p>Speed: {data?.current?.wind_kph} kph</p>
+          <p>Speed: {data?.current?.wind_kph } kph  </p>
           <p>Direction: {data?.current?.wind_dir}</p>
           <p>Degree: {data?.current?.wind_degree}°</p>
           <p>Gust: {data?.current?.gust_kph} kph</p>

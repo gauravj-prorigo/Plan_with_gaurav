@@ -1,9 +1,10 @@
-
-import Navbar from "./Navbar";
+import React, { lazy, Suspense, useContext } from "react";
+const Navbar = lazy(() => import("./Navbar"));
 import { Outlet } from "react-router-dom";
-import React, { useContext } from "react";
+
 import { ThemeContext } from "../context/Themecontext";
 import "./Layout.css"
+import { HiH1 } from "react-icons/hi2";
 const Layout = () => {
     const { theme} = useContext(ThemeContext);
   return (
@@ -15,7 +16,10 @@ const Layout = () => {
       <Navbar />
 
       <main className="layout-content">
-        <Outlet />
+        <Suspense fallback={<h1 style={{alignContent:'center'}}>Loading....</h1>}>
+           <Outlet />
+        </Suspense>
+       
       </main>
       
     </div>

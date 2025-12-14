@@ -7,6 +7,7 @@ const About = lazy(() => import("./components/About"));
 const Home = lazy(() => import("./components/Home"));
 const Layout = lazy(() => import("./components/Layout"));
 import Setting from "./components/Setting";
+import BuggyComponent from "./components/BuggyComponenet";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -18,13 +19,17 @@ export default function App() {
           path: "/",
           element: <Home />,
         },
-          {
+        {
           path: "about",
-          element: <About/>,
+          element: <About />,
         },
-          {
+        {
           path: "setting",
-          element: <Setting/>,
+          element: <Setting />,
+        },
+        {
+          path: "/buggy",
+          element: <BuggyComponent />,
         },
       ],
     },

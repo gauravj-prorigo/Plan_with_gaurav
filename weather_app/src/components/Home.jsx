@@ -6,7 +6,7 @@ import { RiseLoader } from "react-spinners";
 import { ThemeContext } from "../context/Themecontext";
 import { useWeather } from "../Hooks/useWeather";
 import Skelton from "../skelton/Skelton";
-import WeatherDetails from "../sub-components/WeatherDetails"
+import WeatherDetails from "../sub-components/WeatherDetails";
 // const WeatherDetails = lazy(() => import("../sub-components/WeatherDetails"));
 const Home = () => {
   const { theme } = useContext(ThemeContext);
@@ -49,11 +49,7 @@ const Home = () => {
         {loading ? (
           <Skelton />
         ) : (
-          // <Suspense
-          //   fallback={<div style={{ minHeight: 120 }}>Loading details...</div>}
-          // >
-            <WeatherDetails data={data} />
-          // </Suspense>
+          <WeatherDetails data={data} />
         )}
       </div>
     </div>

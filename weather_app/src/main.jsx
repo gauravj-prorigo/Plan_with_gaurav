@@ -5,12 +5,15 @@ import "./index.css";
 const App = lazy(() => import("./App"));
 import { ThemeProvider } from "./context/Themecontext.jsx";
 import { ToastContainer } from "react-toastify";
+import ErrorBoundary from "./ErrorBoundary/ErrorBounadry.jsx";
+import SuspenseFallnback from "./suspense/SuspenseFallnback.jsx";
 createRoot(document.getElementById("root")).render(
-  <ThemeProvider>
-    <Suspense fallback={<h1 style={{ color: "red" }}>Loading .........</h1>}>
-      <App />
-    </Suspense>
-
-    <ToastContainer autoClose={1000} />
-  </ThemeProvider>
+  <ErrorBoundary>
+    <ThemeProvider>
+      <Suspense fallback={<SuspenseFallnback/>}>
+        <App />
+      </Suspense>
+      <ToastContainer autoClose={1000} />
+    </ThemeProvider>
+  </ErrorBoundary>
 );

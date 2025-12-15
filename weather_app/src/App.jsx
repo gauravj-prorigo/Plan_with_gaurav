@@ -8,6 +8,7 @@ const Home = lazy(() => import("./components/Home"));
 const Layout = lazy(() => import("./components/Layout"));
 import Setting from "./components/Setting";
 import BuggyComponent from "./components/BuggyComponenet";
+import ErrorBoundary from "./ErrorBoundary/ErrorBounadry";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -29,7 +30,11 @@ export default function App() {
         },
         {
           path: "/buggy",
-          element: <BuggyComponent />,
+          element: (
+            <ErrorBoundary>
+              <BuggyComponent />
+            </ErrorBoundary>
+          ),
         },
       ],
     },

@@ -9,6 +9,7 @@ import Skelton from "../skelton/Skelton";
 import WeatherDetails from "../sub-components/WeatherDetails";
 // const WeatherDetails = lazy(() => import("../sub-components/WeatherDetails"));
 const Home = () => {
+  
   const { theme } = useContext(ThemeContext);
   const { data, city, setcity, loading, fetchcurrentweather } = useWeather();
 
@@ -27,6 +28,8 @@ const Home = () => {
       }
     );
   }, []);
+
+
   return (
     <div className="main-wrapper">
       <h1
@@ -57,3 +60,7 @@ const Home = () => {
 };
 
 export default Home;
+
+export function sum(a, b) {
+  return a + b;
+}

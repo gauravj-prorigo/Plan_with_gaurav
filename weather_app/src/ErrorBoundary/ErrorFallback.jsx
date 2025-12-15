@@ -25,7 +25,7 @@ const ErrorFallback = () => {
       >
         <MdError style={{ fontSize: "30px", color: "red" }} />
         <h1>Something Went Wrong</h1>
-        
+          
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ const WeatherDetails = ({ data }) => {
     >
       <div className={"cards"}>
         <div className="card card-wind">
-          <h1>
+          <h1 data-testid = "windicon">
             <WiDayCloudyWindy className="icon" />
           </h1>
           <h3>Wind</h3>
@@ -34,7 +34,7 @@ const WeatherDetails = ({ data }) => {
           <h1>
             <FaTemperatureLow className="icon temp" />
           </h1>
-          <h2>
+          <h2 data-testid ="location">
             {data?.location?.name} {data?.location?.region}
           </h2>
           <h3>{data?.current?.temp_c}°C</h3>

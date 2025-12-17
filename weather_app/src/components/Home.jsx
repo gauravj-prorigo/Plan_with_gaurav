@@ -61,6 +61,3 @@ const Home = () => {
 
 export default Home;
 
-export function sum(a, b) {
-  return a + b;
-}

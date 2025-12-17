@@ -4,7 +4,6 @@ import { Outlet } from "react-router-dom";
 import ErrorBoundary from "../ErrorBoundary/ErrorBounadry";
 import { ThemeContext } from "../context/Themecontext";
 import "./Layout.css";
-import { HiH1 } from "react-icons/hi2";
 import SuspenseFallnback from "../suspense/SuspenseFallnback";
 // import { ErrorBoundary } from "react-error-boundary";
 const Layout = () => {
@@ -23,7 +22,7 @@ const Layout = () => {
 
       <main className="layout-content">
         <ErrorBoundary>
-          <Suspense fallback={<SuspenseFallnback/>}>
+          <Suspense fallback={<SuspenseFallnback />}>
             <Outlet />
           </Suspense>
         </ErrorBoundary>

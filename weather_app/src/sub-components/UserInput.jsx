@@ -40,4 +40,3 @@ const UserInput = ({ city, setcity, fetchcurrentweather }) => {
 };
 
 export default UserInput;
-export {handlesubmit}

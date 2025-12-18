@@ -30,8 +30,8 @@ export function useWeather() {
     console.log("First");
     try {
       const res = await fetch(url);
-      await new Promise((resolve, reject) => setTimeout(resolve, 1000));
-      if (!res.ok) {0
+      console.log(res)
+      if (!res.ok) {
         toast.error("Give Correct City name");
         throw new Error("Failed to fetch weather data");
       }

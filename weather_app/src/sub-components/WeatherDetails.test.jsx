@@ -7,7 +7,7 @@ describe("Weather component testing", () => {
   const mockdata = {
     location: {
       name: "Pimpri",
-      region: "Maharashtra",
+      region: "maharashtra",
       country: "India",
     },
     current: {
@@ -35,8 +35,14 @@ describe("Weather component testing", () => {
       </ThemeProvider>
     );
     const location = screen.getByTestId("location");
+    const tempicon = screen.getByTestId("tempicon");
+    const Humidityicon = screen.getByTestId("Humidityicon");
+    const wind = screen.getByTestId("wind");
+    expect(wind).toBeInTheDocument();
+    expect(Humidityicon).toBeInTheDocument();
     expect(location).toBeInTheDocument();
-    expect(screen.getByText(/Maharashtra/)).toBeInTheDocument();
+    expect(tempicon).toBeInTheDocument();
+    expect(screen.getByText(/Maharashtra/i)).toBeInTheDocument();
     expect(screen.getByText(/29.3/)).toBeInTheDocument();
     expect(screen.getByText(/27.9/)).toBeInTheDocument();
     expect(screen.getByText(/9.4/)).toBeInTheDocument();

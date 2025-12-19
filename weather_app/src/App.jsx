@@ -29,7 +29,7 @@ export default function App() {
           element: <Setting />,
         },
         {
-          path: "/buggy",
+          path: "buggy",
           element: (
             <ErrorBoundary>
               <BuggyComponent />

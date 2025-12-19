@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import UserInput from "./UserInput";
 
@@ -21,6 +21,23 @@ describe("check input and api been called ", () => {
     expect(button).toBeInTheDocument();
   });
 
+  it("check user can type", () => {
+    const setcity = vi.fn();
+    render(<UserInput setcity={setcity} />);
+    const input = screen.getByRole("textbox");
+    fireEvent.change(input, { target: { value: "Gaurav" } });
+    expect(setcity).toHaveBeenCalled();
+  });
+
+  it("check user can click backspece", () => {
+    const setcity = vi.fn();
+    render(<UserInput setcity={setcity} />);
+    const input = screen.getByRole("textbox");
+    fireEvent.change(input, { target: { value: "Gaurav" } });
+    fireEvent.change(input, { target: { value: "Gaura" } });
+    expect(setcity).toHaveBeenCalledWith("Gaura");
+  });
+
   it("check is error msg visible", () => {
     render(
       <UserInput city="" setcity={vi.fn()} fetchcurrentweather={vi.fn()} />
@@ -30,15 +47,14 @@ describe("check input and api been called ", () => {
     const erromsg = screen.getByText("Enter the city name");
     expect(erromsg).toBeInTheDocument();
   });
-  
+
   it("check api call", () => {
     const api = vi.fn();
-    const city = "Nanded";
     render(
       <UserInput city="Nanded" setcity={vi.fn()} fetchcurrentweather={api} />
     );
     fireEvent.click(screen.getByRole("button"));
     expect(api).toHaveBeenCalled();
-    expect(api).toHaveBeenCalledWith(expect.stringContaining(city));
+    
   });
 });

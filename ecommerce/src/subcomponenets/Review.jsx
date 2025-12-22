@@ -1,24 +1,24 @@
 import shoesData from "../data/data";
 import "../css/Review.css";
 import Card from "./Card";
+import { useEffect, useState } from "react";
+import ReviewCardSkeleton from "../Skeleton/ReviewCardSkeleton";
 
-
-
-import { useState } from "react";
 function Review() {
   const [shoedata, setshoedata] = useState([]);
   const [loading, setloading] = useState(true);
-  const data = new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(shoesData);
-    }, 2000);
-  });
-
-  data.then((result) => {
-    console.log(result);
-    setshoedata(result);
-    setloading(false);
-  });
+  useEffect(() => {
+    const data = new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(shoesData);
+      }, 2000);
+    });
+    data.then((result) => {
+      console.log(result);
+      setshoedata(result);
+      setloading(false);
+    });
+  }, []);
 
   return (
     <div className="main-review-container">
@@ -38,11 +38,11 @@ function Review() {
         </p>
 
         <div className="show-review">
-          {loading ? (
-            <h1>Loading</h1>
-          ) : (
-            shoedata.map((shoes) => <Card key={shoes.id} shoes={shoes} />)
-          )}
+          {loading
+            ? Array.from({ length: 5 }).map((_, index) => (
+                <ReviewCardSkeleton key={index} />
+              ))
+            : shoedata.map((shoes) => <Card key={shoes.id} shoes={shoes} />)}
         </div>
       </div>
     </div>

@@ -1,7 +1,5 @@
 .main-review-container{
-    border: 2px solid red;
     margin-bottom: 50px;
-   
 }
 
 .sub-main-review{
@@ -11,7 +9,8 @@
 }
 
 .show-review{
-  gap: 10px;
+  gap: 20px;
   margin: 15px;
   display: flex;
+  
 }

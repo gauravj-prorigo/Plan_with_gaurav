@@ -7,7 +7,7 @@ function LandingPage() {
        <div className="main-layout-container">
       <div className="main-layouts">
         <div className="sub-main">
-          <img src={shoes} style={{ width: "100%", height: "250px" }} />
+          <img src={shoes} style={{ width: "100%", height: "350px" }} />
         </div>
         <div className="sub-main2">
           <p>
@@ -18,6 +18,7 @@ function LandingPage() {
         </div>
       </div>
     </div>
+    <Review/>
     </div>
    
   );

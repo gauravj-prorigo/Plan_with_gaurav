@@ -14,7 +14,7 @@ function App() {
       element: <Layout />,
       children: [
         {
-          path: "/",
+          index:true,
           element: <LandingPage />,
         },
          {

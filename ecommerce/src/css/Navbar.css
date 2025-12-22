@@ -1,22 +1,32 @@
-.nav-main{
+.nav-main {
+    position: sticky;
+    top: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: rgb(235, 233, 232);
     padding: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.363);
+    height: 40px;
 }
-.Navlink{
+
+.nav-main2 {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Navlink {
     text-decoration: none;
     color: black;
     font-size: 18px;
     font-weight: 500;
 }
-.card-nav{
-    width: 15%;
+
+.card-nav {
     display: flex;
     justify-content: end;
     align-items: end;
     text-decoration: none;
 
 }
-

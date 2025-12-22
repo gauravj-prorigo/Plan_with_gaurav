@@ -1,11 +1,13 @@
 import shoes from "../assets/Air-Jordan-PNG-Free-File-Download.png";
 import "../css/LandingPage.css";
+import Review from "../subcomponenets/Review";
 function LandingPage() {
   return (
-    <div className="main-layout-container">
+    <div className="mains-layout-container">
+       <div className="main-layout-container">
       <div className="main-layouts">
         <div className="sub-main">
-          <img src={shoes} style={{ width: "100%", height: "300px" }} />
+          <img src={shoes} style={{ width: "100%", height: "250px" }} />
         </div>
         <div className="sub-main2">
           <p>
@@ -16,6 +18,8 @@ function LandingPage() {
         </div>
       </div>
     </div>
+    </div>
+   
   );
 }
 

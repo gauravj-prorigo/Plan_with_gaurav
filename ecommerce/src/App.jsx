@@ -1,6 +1,3 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router";
@@ -9,6 +6,7 @@ import LandingPage from "./componentes/LandingPage";
 import About from "./componentes/About";
 import ContactUs from "./componentes/ContactUs";
 import OurTeam from "./componentes/OurTeam";
+
 function App() {
   const routes = createBrowserRouter([
     {

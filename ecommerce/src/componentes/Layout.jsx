@@ -1,15 +1,16 @@
 import { Outlet } from "react-router";
 import Navbar from "../subcomponenets/Navbar";
 import "../css/Layout.css";
+import Footer from "../subcomponenets/Footer";
 function Layout() {
   return (
     <div className="main-layout">
       <div>
         <Navbar />
-        <div style={{width:'100%',height:'100vh',display:'flex',flexDirection:'column'}}>
+        <div >
               <Outlet />
         </div>
-      
+      <Footer/>
       </div>
     </div>
   );

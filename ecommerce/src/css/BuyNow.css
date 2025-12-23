@@ -1,0 +1,33 @@
+.main-buy {
+  margin: 0;
+  width: 100%;
+  height: 900px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sub-main-buy {
+  width: fit-content;
+  height: fit-content;
+  padding: 30px 30px;
+  display: flex;
+
+}
+
+.sub-main-buy img {
+  height: 350px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.sub-main-buy2 {
+  padding: 10px 20px;
+  color: aqua;
+}
+
+.sub-main-buy2 p {
+  font-size: 16px;
+  font-weight: 500;
+}

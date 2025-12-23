@@ -14,7 +14,7 @@ const Product = [
     ]
   },
   {
-    id: 8,
+    id: 18,
     name: "Everyday Comfort Walk",
     price: 2599,
     image: "https://images.unsplash.com/photo-1549298916-b41d501d3772",
@@ -92,7 +92,74 @@ const Product = [
       "Stylish design with great comfort.",
       "Lightweight and breathable."
     ]
-  }
+  },
+  {
+  id: 7,
+  name: "Velocity Street Pro",
+  price: 3999,
+  image: "https://images.unsplash.com/photo-1611510338559-2f463335092c?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description:
+    "High-performance sneakers built for urban movement.",
+  reviews: [
+    "Very light and responsive.",
+    "Looks premium on casual outfits.",
+    "Good grip and cushioning."
+  ]
+},
+{
+  id: 8,
+  name: "Cloud Walk Elite",
+  price: 2899,
+  image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description:
+    "Ultra-soft walking shoes for long-day comfort.",
+  reviews: [
+    "Feels very soft underfoot.",
+    "Perfect for daily walking.",
+    "No foot pain even after long hours."
+  ]
+},
+{
+  id: 9,
+  name: "Street Alpha Boost",
+  price: 4499,
+  image: "https://images.unsplash.com/photo-1543508282-6319a3e2621f?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description:
+    "Chunky street sneakers with bold styling.",
+  reviews: [
+    "Eye-catching design.",
+    "Feels strong and durable.",
+    "Great for streetwear looks."
+  ]
+},
+{
+  id: 10,
+  name: "Flex Motion Runner",
+  price: 3199,
+  image: "https://images.unsplash.com/photo-1580902215262-9b941bc6eab3?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description:
+    "Flexible running shoes designed for smooth movement.",
+  reviews: [
+    "Very flexible sole.",
+    "Comfortable for jogging.",
+    "Nice balance and grip."
+  ]
+},
+{
+  id: 12,
+  name: "Pulse Training Max",
+  price: 4799,
+  image: "https://images.unsplash.com/photo-1695073621086-aa692bc32a3d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description:
+    "High-support trainers built for intense workouts.",
+  reviews: [
+    "Excellent workout support.",
+    "Great grip on gym floors.",
+    "Feels very stable."
+  ]
+},
+
+
 ];
 
 export default Product;

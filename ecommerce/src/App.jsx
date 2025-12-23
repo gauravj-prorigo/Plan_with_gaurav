@@ -6,6 +6,7 @@ import LandingPage from "./componentes/LandingPage";
 import About from "./componentes/About";
 import ContactUs from "./componentes/ContactUs";
 import OurTeam from "./componentes/OurTeam";
+import BuyNow from "./subcomponenets/Buynow";
 
 function App() {
   const routes = createBrowserRouter([
@@ -29,6 +30,11 @@ function App() {
           path: "ourteam",
           element: <OurTeam/>,
         },
+        {
+          path: "ourteam/:id",
+          element: <BuyNow/>,
+        },
+
       ],
     },
   ]);

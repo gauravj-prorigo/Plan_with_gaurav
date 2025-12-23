@@ -22,19 +22,17 @@
   align-items: center;
   justify-content: center;
   width: 50%;
- font-size: 20px;
+  font-size: 20px;
   padding: 20px;
   font-weight: 500;
   font-family: cursive;
   text-align: center;
 }
 .sub-main {
-  width: 50%;
   border-right: 2px solid black;
 }
-.sub-main3{
+.sub-main3 {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }

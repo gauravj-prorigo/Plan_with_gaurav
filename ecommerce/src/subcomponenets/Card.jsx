@@ -7,6 +7,7 @@ function Card({ shoes }) {
 
       <div className="card-content">
         <h4 className="review-title">Reviews</h4>
+        <p className="card-star">⭐⭐⭐⭐⭐</p>
         <ul className="review-list">
           {shoes.reviews.map((review, index) => (
             <li key={index}>{review}</li>

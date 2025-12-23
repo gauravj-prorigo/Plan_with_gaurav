@@ -10,7 +10,7 @@
 }
 
 .nav-main2 {
-    width: 75%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -21,12 +21,4 @@
     color: black;
     font-size: 18px;
     font-weight: 500;
-}
-
-.card-nav {
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    text-decoration: none;
-
 }

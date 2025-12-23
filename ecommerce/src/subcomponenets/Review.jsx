@@ -39,7 +39,7 @@ function Review() {
 
         <div className="show-review">
           {loading
-            ? Array.from({ length: 5 }).map((_, index) => (
+            ?Array(5).fill(null).map((_, index) => (
                 <ReviewCardSkeleton key={index} />
               ))
             : shoedata.map((shoes) => <Card key={shoes.id} shoes={shoes} />)}

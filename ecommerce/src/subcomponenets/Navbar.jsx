@@ -22,9 +22,6 @@ function Navbar() {
         <NavLink to={"/ourteam"} className={"Navlink"}>
           Products
         </NavLink>
-      </div>
-
-      <div className="card-nav">
         <NavLink to={"/"}>
           <FaCartArrowDown style={{ fontSize: "25px", color: "black" }} />
         </NavLink>

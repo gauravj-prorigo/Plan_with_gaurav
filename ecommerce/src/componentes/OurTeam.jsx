@@ -17,13 +17,12 @@ function OurTeam() {
       Setprodata(res);
     });
   }, []);
-  const SKELETON_COUNT = 8;
   return (
     <div>
       <div className="main-product">
         <div className="sub-product">
           {prodata.length === 0
-            ? Array.from({ length: SKELETON_COUNT }).map((_, index) => (
+            ? Array(12).fill(null).map((_, index) => (
                 <ProductSkeleton key={index} />
               ))
             : prodata.map((product) => (

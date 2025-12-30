@@ -7,6 +7,7 @@ import About from "./componentes/About";
 import ContactUs from "./componentes/ContactUs";
 import OurTeam from "./componentes/OurTeam";
 import BuyNow from "./subcomponenets/Buynow";
+import Cart from "./componentes/Cart";
 
 function App() {
   const routes = createBrowserRouter([
@@ -34,7 +35,10 @@ function App() {
           path: "ourteam/:id",
           element: <BuyNow/>,
         },
-
+        {
+          path:'cart',
+          element:<Cart/>
+        }
       ],
     },
   ]);

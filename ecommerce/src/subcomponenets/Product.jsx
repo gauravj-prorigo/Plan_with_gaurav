@@ -1,11 +1,24 @@
 import { useNavigate } from "react-router";
 import "../css/product.css";
+import { useContext } from "react";
+import { ProductContext } from "../context/ProductContext";
 
 function Product({ product }) {
-  const navigate = useNavigate()
-  function handleonclick(){
-    navigate(`/ourteam/${product.id}`)
+  const { item, setItem } = useContext(ProductContext);
+  const navigate = useNavigate();
+  function handleonclick() {
+    navigate(`/ourteam/${product.id}`);
   }
+
+  function handleaddclick() {
+    // console.log(item)
+    setItem((prev) => [...prev, product]);
+    console.log("item in context", item);
+  }
+
+  const isInCart = item.find((it) => it.id === product.id);
+  console.log("iscart",isInCart)
+
   return (
     <div className="product">
       <img src={product.image} alt={product.name} className="product-image" />
@@ -16,8 +29,16 @@ function Product({ product }) {
         <h3>RS :{product.price}</h3>
       </div>
       <div className="product-button">
-        <button className="add">Add to cart</button>
-        <button className="buy" onClick={handleonclick}>Buy Now</button>
+        {isInCart ? (
+         null
+        ) : (
+          <button className="add" onClick={handleaddclick}>
+            Add to cart
+          </button>
+        )}
+        <button className="buy" onClick={handleonclick}>
+          Buy Now
+        </button>
       </div>
     </div>
   );

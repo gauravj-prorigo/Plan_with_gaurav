@@ -2,7 +2,10 @@ import { Link, NavLink } from "react-router";
 import "../css/Navbar.css";
 import logo from "../assets/idbmxy9XVT_logos.png";
 import { FaCartArrowDown } from "react-icons/fa";
+import { useContext } from "react";
+import { ProductContext } from "../context/ProductContext";
 function Navbar() {
+  const {item} = useContext(ProductContext)
   return (
     <div className="nav-main">
       <div className="nav-main2">
@@ -22,8 +25,9 @@ function Navbar() {
         <NavLink to={"/ourteam"} className={"Navlink"}>
           Products
         </NavLink>
-        <NavLink to={"/"}>
+        <NavLink to={"/cart"}>
           <FaCartArrowDown style={{ fontSize: "25px", color: "black" }} />
+          <span>{item.length}</span>
         </NavLink>
       </div>
     </div>

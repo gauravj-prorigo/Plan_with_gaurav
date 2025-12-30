@@ -12,8 +12,9 @@ function Navbar() {
         <Link to={"/"}>
           <img
             src={logo}
+            className="nav-img"
             alt="logo-site"
-            style={{ width: "100px", height: "20px" }}
+           
           />
         </Link>
         <NavLink to={"/about"} className={"Navlink"}>
@@ -25,9 +26,9 @@ function Navbar() {
         <NavLink to={"/ourteam"} className={"Navlink"}>
           Products
         </NavLink>
-        <NavLink to={"/cart"}>
-          <FaCartArrowDown style={{ fontSize: "25px", color: "black" }} />
-          <span>{item.length}</span>
+        <NavLink to={"/cart"}  className={"Navlink"}>
+          <FaCartArrowDown   className="nav-icon"/>
+          <span className="nav-span">{item.length}</span>
         </NavLink>
       </div>
     </div>

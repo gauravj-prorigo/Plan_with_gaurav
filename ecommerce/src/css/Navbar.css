@@ -22,3 +22,39 @@
     font-size: 18px;
     font-weight: 500;
 }
+.nav-img{
+    width: 100px;
+    height: 20px;
+}
+.nav-icon{
+    font-size: 25px;
+    color: black;
+}
+
+@media screen and (max-width : 460px){
+    .nav-main {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(235, 233, 232);
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.363);
+    height: 20px;
+    width: 100%;
+}
+.Navlink{
+    font-size: 12px;
+}
+.nav-img{
+    width: 50px;
+    height: 10px;
+}
+.nav-icon{
+    font-size: 15px;
+    color: black;
+}
+.nav-span{
+    font-size: 8px;
+}
+}

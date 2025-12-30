@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import "../css/product.css";
 import { useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
+import { toast } from "react-toastify";
 
 function Product({ product }) {
   const { item, setItem } = useContext(ProductContext);
@@ -12,6 +13,7 @@ function Product({ product }) {
 
   function handleaddclick() {
     // console.log(item)
+    toast.success("Added in the card")
     setItem((prev) => [...prev, product]);
     console.log("item in context", item);
   }

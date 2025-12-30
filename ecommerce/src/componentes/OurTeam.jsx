@@ -22,9 +22,9 @@ function OurTeam() {
       <div className="main-product">
         <div className="sub-product">
           {prodata.length === 0
-            ? Array(12).fill(null).map((_, index) => (
-                <ProductSkeleton key={index} />
-              ))
+            ? Array(12)
+                .fill(null)
+                .map((_, index) => <ProductSkeleton key={index} />)
             : prodata.map((product) => (
                 <Product product={product} key={product.id} />
               ))}

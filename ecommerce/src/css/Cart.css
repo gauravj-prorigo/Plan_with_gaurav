@@ -1,0 +1,26 @@
+.main-cart{
+    min-height: 800px;
+}
+.main-cart{
+    text-align: center;
+}
+
+.sub-cart3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+
+.global-btn{
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(231, 107, 107);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}

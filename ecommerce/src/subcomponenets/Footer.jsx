@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <p style={{padding:'10px 10px'}}>© 2025 Kicks, Inc. All rights reserved</p>
+      <p className="fotter-copy" style={{padding:'10px'}}>© 2025 Kicks, Inc. All rights reserved</p>
     </div>
   );
 };

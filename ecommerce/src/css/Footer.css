@@ -1,7 +1,7 @@
 .footer {
- display: flex;
-align-items: center;
-justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   color: rgb(0, 0, 0);
   padding: 20px;
   text-align: center;
@@ -9,6 +9,29 @@ justify-content: space-around;
 }
 
 .footer-main {
+  height: 380px;
+}
 
-height: 380px;
+@media screen and (max-width:576px){
+  .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(128, 128, 128, 0.165);
+}
+
+.footer-main {
+  height: 270px;
+}
+.row p{
+  font-size: 10px;
+}
+.fotter-copy{
+  padding: 0px;
+  margin-top: 3px;
+  font-size: 10px;
+}
 }

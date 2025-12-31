@@ -1,38 +1,39 @@
 .nav-main {
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(235, 233, 232);
-    padding: 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.363);
-    height: 40px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(235, 233, 232);
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.363);
+  height: 40px;
+  overflow: hidden;
 }
 
 .nav-main2 {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .Navlink {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    font-weight: 500;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
 }
-.nav-img{
-    width: 100px;
-    height: 20px;
+.nav-img {
+  width: 100px;
+  height: 20px;
 }
-.nav-icon{
-    font-size: 25px;
-    color: black;
+.nav-icon {
+  font-size: 25px;
+  color: black;
 }
 
-@media screen and (max-width : 460px){
-    .nav-main {
+@media screen and (max-width: 460px) {
+  .nav-main {
     position: sticky;
     top: 0;
     display: flex;
@@ -41,20 +42,50 @@
     padding: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.363);
     height: 20px;
-    width: 100%;
-}
-.Navlink{
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .Navlink {
     font-size: 12px;
-}
-.nav-img{
+  }
+  .nav-img {
     width: 50px;
     height: 10px;
-}
-.nav-icon{
+  }
+  .nav-icon {
     font-size: 15px;
     color: black;
-}
-.nav-span{
+  }
+  .nav-span {
     font-size: 8px;
+  }
 }
+
+@media screen and (min-width: 461px) and (max-width: 760px) {
+  .nav-main {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(235, 233, 232);
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.363);
+    height: 30px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .Navlink {
+    font-size: 16px;
+  }
+  .nav-img {
+    width: 75px;
+    height: 15px;
+  }
+  .nav-icon {
+    font-size: 18px;
+    color: black;
+  }
+  .nav-span {
+    font-size: 11px;
+  }
 }

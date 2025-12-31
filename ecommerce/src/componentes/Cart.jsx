@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import "../css/Cart.css";
 import { ProductContext } from "../context/ProductContext";
-import Product from "../subcomponenets/Product";
 import Cartitem from "../subcomponenets/Cartitem";
 import { useNavigate } from "react-router";
 function Cart() {

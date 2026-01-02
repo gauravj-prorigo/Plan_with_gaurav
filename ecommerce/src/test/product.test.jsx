@@ -4,7 +4,6 @@ import Product from "../subcomponenets/Product";
 import { ProductProvider } from "../context/ProductContext";
 import { BrowserRouter } from "react-router";
 
-
   global.localStorage = {
     getItem: vi.fn(() => "[]"),
     setItem: vi.fn(),
@@ -24,6 +23,7 @@ const mockProduct = {
       "Perfect shoes for gym sessions."
     ]
   };
+  
 describe("cart test", () => {
   test("check cart is render or not", () => {
     render(

@@ -1,0 +1,12 @@
+.sub-about{
+    display: flex;
+    width: 60%;
+ margin: auto;
+ height: 100%;
+ align-items: center;
+ justify-content: center;
+}
+.main-about{
+    min-height: 700px;
+    display: flex;
+}

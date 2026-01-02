@@ -1,0 +1,223 @@
+.main-contactus {
+  max-width: 100%;
+  min-height: 500px;
+  background-color: rgb(218, 218, 213);
+}
+
+.sub-contactus {
+  display: flex;
+  /* justify-content: center; */
+  padding: 50px;
+  box-sizing: border-box;
+}
+.sub1-contactus {
+  width: 60%;
+}
+.img-contactus {
+  width: 100%;
+  height: 100%;
+}
+.img-contactus img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.sub2-contactus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  margin-left: 40px;
+}
+.sub2-contactus h1 {
+  font-size: 70px;
+  margin: 0px;
+}
+.contactus-form {
+  margin: 50px 30px;
+  height: 100%;
+  padding: 10px;
+}
+.form1 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.form1 label {
+  font-size: 22px;
+  font-family: cursive;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.form1 input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid black;
+  width: 300px;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: cursive;
+  outline: none;
+}
+form button {
+  width: 100%;
+  padding: 10px 0px;
+  margin-top: 20px;
+  font-weight: 700;
+  font-family: cursive;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 460px) {
+  .main-contactus {
+    max-width: 100%;
+    min-height: 500px;
+    background-color: rgb(218, 218, 213);
+  }
+
+  .sub-contactus {
+    display: flex;
+    /* justify-content: center; */
+    padding: 20px;
+    height: 100%;
+  }
+  .sub1-contactus {
+    width: 60%;
+  }
+  .img-contactus {
+    width: 100%;
+    height: 100%;
+  }
+  .img-contactus img {
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+  }
+
+  .sub2-contactus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    margin-left: 20px;
+  }
+  .sub2-contactus h1 {
+    font-size: 15px;
+    margin: 0px;
+  }
+  .contactus-form {
+    margin: 20px 10px;
+    height: 100%;
+    padding: 10px;
+  }
+  .form1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .form1 label {
+    font-size: 14px;
+    font-family: cursive;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .form1 input {
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    width: 100px;
+    font-weight: 500;
+    font-size: 12px;
+    font-family: cursive;
+    outline: none;
+  }
+  form button {
+    width: 100%;
+    padding: 5px 0px;
+    margin-top: 10px;
+    font-weight: 700;
+    font-family: cursive;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width:461px) and (max-width: 860px) {
+  .main-contactus {
+    max-width: 100%;
+    min-height: 500px;
+    background-color: rgb(218, 218, 213);
+  }
+
+  .sub-contactus {
+    display: flex;
+    /* justify-content: center; */
+    padding: 30px;
+  }
+  .sub1-contactus {
+    width: 60%;
+  }
+  .img-contactus {
+    width: 100%;
+    height: 100%;
+  }
+  .img-contactus img {
+    width: 100%;
+    object-fit:cover;
+    height: 500px;
+
+  }
+
+  .sub2-contactus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    margin-left: 25px;
+  }
+  .sub2-contactus h1 {
+    font-size: 30px;
+    margin: 0px;
+  }
+  .contactus-form {
+    margin: 30px 20px;
+    height: 100%;
+    padding: 7px;
+  }
+  .form1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+  }
+  .form1 label {
+    font-size: 18px;
+    font-family: cursive;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  .form1 input {
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    width: 160px;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: cursive;
+    outline: none;
+  }
+  form button {
+    width: 100%;
+    padding: 8px 0px;
+    margin-top: 15px;
+    font-weight: 700;
+    font-family: cursive;
+    cursor: pointer;
+  }
+}
+

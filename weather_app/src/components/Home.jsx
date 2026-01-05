@@ -1,13 +1,13 @@
 import "./Home.css";
 import UserInput from "../sub-components/UserInput";
 
-import { lazy, Suspense, useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { RiseLoader } from "react-spinners";
 import { ThemeContext } from "../context/Themecontext";
 import { useWeather } from "../Hooks/useWeather";
 import Skelton from "../skelton/Skelton";
 import WeatherDetails from "../sub-components/WeatherDetails";
-// const WeatherDetails = lazy(() => import("../sub-components/WeatherDetails"));
+
 const Home = () => {
   
   const { theme } = useContext(ThemeContext);

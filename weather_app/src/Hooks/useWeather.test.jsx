@@ -5,7 +5,7 @@ import {
 import { describe, it, expect, vi } from "vitest";
 import { useWeather } from "./useWeather";
 
-describe("useWeather - functionality tests", () => {
+describe("useWeather hook testing when api response is ok", () => {
   const mockdata = {
     location: {
       name: "Pimpri",
@@ -44,7 +44,7 @@ describe("useWeather - functionality tests", () => {
   });
 });
 
-describe("useWeather - functionality tests", () => {
+describe("useWeather hook testing when api response is not ok", () => {
   it("should not fetch weather data and update state", async () => {
     global.fetch = vi.fn(() =>
       Promise.resolve({

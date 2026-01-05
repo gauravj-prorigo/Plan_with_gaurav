@@ -45,7 +45,7 @@
 
 
 
-@media screen and (max-width :760px){
+@media (max-width :760px){
   .main-layout-container {
   display: flex;
   flex-direction: column;

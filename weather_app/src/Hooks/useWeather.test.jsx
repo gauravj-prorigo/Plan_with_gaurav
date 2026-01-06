@@ -24,7 +24,7 @@ describe("useWeather hook testing when api response is ok", () => {
   global.fetch = vi.fn(() =>
     Promise.resolve({
       ok: true,
-      json: () => Promise.resolve(mockdata),
+      json: () => Promise.resolve(mockdata)
     })
   );
 

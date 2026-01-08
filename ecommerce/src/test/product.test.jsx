@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect, test, beforeAll, vi } from "vitest";
+import { describe, expect, test, vi } from "vitest";
 import Product from "../subcomponenets/Product";
 import { ProductProvider } from "../context/ProductContext";
 import { BrowserRouter } from "react-router";

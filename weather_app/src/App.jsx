@@ -9,6 +9,7 @@ const Layout = lazy(() => import("./components/Layout"));
 import Setting from "./components/Setting";
 import BuggyComponent from "./components/BuggyComponenet";
 import ErrorBoundary from "./ErrorBoundary/ErrorBounadry";
+import Dummy from "./components/Dummy";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -27,6 +28,10 @@ export default function App() {
         {
           path: "setting",
           element: <Setting />,
+        },
+          {
+          path: "dummy",
+          element: <Dummy/>,
         },
         {
           path: "buggy",

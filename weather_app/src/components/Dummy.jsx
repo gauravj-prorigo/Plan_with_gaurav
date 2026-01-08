@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 
-function App() {
-  const [postdata, Setpostdata] = useState("");
+function Dummy(){
+const [postdata, Setpostdata] = useState("");
   useEffect(() => {
     fetchuserlist();
   }, []);
@@ -31,15 +30,4 @@ function App() {
   );
 }
 
-// function App() {
-//   const [count, setCount] = useState(0);
-//   const [num, setnum] = useState(1);
-//   const [arr, setarr] = useState([20]);
-
-//   // setnum(5)
-//   setarr([25])
-
-//   return <button onClick={() => setCount((prev) => prev + 1)}>Hello</button>;
-// }
-
-export default App;
+export default Dummy

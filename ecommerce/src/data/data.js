@@ -17,6 +17,7 @@ const shoesData = [
     id: 2,
     name: "Street Pro Sneakers",
     price: 3499,
+    quntity:1,
     image:
       "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
     description:
@@ -31,6 +32,7 @@ const shoesData = [
     id: 3,
     name: "Air Motion Max",
     price: 3999,
+    quntity:1,
     image:
       "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519",
     description:
@@ -45,6 +47,7 @@ const shoesData = [
     id: 4,
     name: "Classic White Edge",
     price: 2799,
+    quntity:1,
     image:
       "https://images.unsplash.com/photo-1560769629-975ec94e6a86",
     description:
@@ -59,6 +62,7 @@ const shoesData = [
     id: 5,
     name: "Power Grip Trainers",
     price: 4599,
+    quntity:1,
     image:
       "https://images.unsplash.com/photo-1584735175097-719d848f8449",
     description:
@@ -73,6 +77,7 @@ const shoesData = [
     id: 6,
     name: "Night Runner X",
     price: 3799,
+    quntity:1,
     image:
       "https://images.unsplash.com/photo-1605348532760-6753d2c43329",
     description:

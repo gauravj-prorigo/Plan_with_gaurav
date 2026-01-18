@@ -3,6 +3,7 @@ const Product = [
     id: 2,
     name: "Street Pro Sneakers",
     price: 3499,
+    quntity:1,
     image:
       "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
     description:
@@ -17,6 +18,7 @@ const Product = [
     id: 18,
     name: "Everyday Comfort Walk",
     price: 2599,
+    quntity:1,
     image: "https://images.unsplash.com/photo-1549298916-b41d501d3772",
     description: "Daily-wear shoes designed for long walking hours.",
     reviews: [
@@ -29,6 +31,7 @@ const Product = [
     id: 14,
     name: "Retro Street Classic",
     price: 3799,
+    quntity:1,
     image: "https://images.unsplash.com/photo-1603808033192-082d6919d3e1",
     description: "Retro-inspired sneakers with modern comfort.",
     reviews: [
@@ -41,6 +44,7 @@ const Product = [
     id: 3,
     name: "Air Motion Max",
     price: 3999,
+    quntity:1,
     image:
       "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519",
     description:
@@ -55,6 +59,7 @@ const Product = [
     id: 4,
     name: "Classic White Edge",
     price: 2799,
+    quntity:1,
     image:
       "https://images.unsplash.com/photo-1560769629-975ec94e6a86",
     description:
@@ -69,6 +74,7 @@ const Product = [
     id: 5,
     name: "Power Grip Trainers",
     price: 4599,
+    quntity:1,
     image:
       "https://images.unsplash.com/photo-1584735175097-719d848f8449",
     description:
@@ -83,6 +89,7 @@ const Product = [
     id: 6,
     name: "Night Runner X",
     price: 3799,
+    quntity:1,
     image:
       "https://images.unsplash.com/photo-1605348532760-6753d2c43329",
     description:
@@ -97,6 +104,7 @@ const Product = [
   id: 7,
   name: "Velocity Street Pro",
   price: 3999,
+  quntity:1,
   image: "https://images.unsplash.com/photo-1611510338559-2f463335092c?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description:
     "High-performance sneakers built for urban movement.",
@@ -110,6 +118,7 @@ const Product = [
   id: 8,
   name: "Cloud Walk Elite",
   price: 2899,
+  quntity:1,
   image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description:
     "Ultra-soft walking shoes for long-day comfort.",
@@ -123,6 +132,7 @@ const Product = [
   id: 9,
   name: "Street Alpha Boost",
   price: 4499,
+  quntity:1,
   image: "https://images.unsplash.com/photo-1543508282-6319a3e2621f?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description:
     "Chunky street sneakers with bold styling.",
@@ -136,6 +146,7 @@ const Product = [
   id: 10,
   name: "Flex Motion Runner",
   price: 3199,
+  quntity:1,
   image: "https://images.unsplash.com/photo-1580902215262-9b941bc6eab3?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description:
     "Flexible running shoes designed for smooth movement.",
@@ -149,6 +160,7 @@ const Product = [
   id: 12,
   name: "Pulse Training Max",
   price: 4799,
+  quntity:1,
   image: "https://images.unsplash.com/photo-1695073621086-aa692bc32a3d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description:
     "High-support trainers built for intense workouts.",

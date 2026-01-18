@@ -1,5 +1,7 @@
 .main-cart{
     min-height: 800px;
+    overflow-x: hidden;
+    
 }
 .main-cart{
     text-align: center;
@@ -26,3 +28,22 @@
   height: 30px;
   font-size: 20px;
 }
+
+.cart-total {
+  font-size: 22px;
+  font-weight: bold;
+  color: darkgreen;
+  margin-top: 20px;
+  text-align: right;
+}
+
+.cart-total-box {
+  border-top: 2px dashed black;  
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 0;
+  width: 60%;
+  padding-left: 20px;
+  margin-left: 20px;
+}
+

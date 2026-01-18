@@ -1,5 +1,6 @@
 import shoes from "../assets/Air-Jordan-PNG-Free-File-Download.png";
 import "../css/LandingPage.css";
+import Log_Sin_model from "../subcomponenets/Log_Sin_model";
 import Review from "../subcomponenets/Review";
 function LandingPage() {
   return (

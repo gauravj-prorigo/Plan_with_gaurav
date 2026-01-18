@@ -5,7 +5,10 @@ import Cartitem from "../subcomponenets/Cartitem";
 import { useNavigate } from "react-router";
 function Cart() {
   const { item } = useContext(ProductContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const totalcart = item.reduce((total, curr) => {
+    return total + curr.price * curr.quntity;
+  }, 0.0);
   return (
     <div className="main-cart">
       <h1>Cart Page</h1>
@@ -13,13 +16,19 @@ function Cart() {
         {item.length === 0 ? (
           <div className="sub-cart3">
             <h1>Nothing in the card </h1>
-            <button className="global-btn" onClick={()=>navigate('/ourteam')}>Add Items</button>
+            <p>Total: {totalcart}</p>
+            <button className="global-btn" onClick={() => navigate("/ourteam")}>
+              Add Items
+            </button>
           </div>
         ) : (
           <div className="sub-cart2">
             {item.map((product, index) => (
               <Cartitem product={product} key={index} />
             ))}
+            <div className="cart-total-box">
+              <p className="cart-total">Total: ₹ {totalcart}</p>
+            </div>
           </div>
         )}
       </div>

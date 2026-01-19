@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import "../css/Log_Sin_model.css"
+import { Authcontext, AuthProvider } from "../context/AuthContext";
 
 const Log_Sin_model = () => {
   const [signup, Setsignup] = useState(true);
+  const {signups,login} = useContext(Authcontext)
   const {
     register,
     handleSubmit,
@@ -14,6 +16,12 @@ const Log_Sin_model = () => {
 
   function handleformsubmit(data) {
     console.log(data);
+    if(signup){
+        signups(data)
+    }
+    else{
+        login(data)
+    }
     reset()
   }
 
@@ -51,7 +59,7 @@ const Log_Sin_model = () => {
               type="password"
               {...register("password", { required: true })}
             />
-            {errors.password && <span>Username required</span>}
+            {errors.password && <span>Password required</span>}
           </div>
           <button type="submit">Submit</button>
         </div>

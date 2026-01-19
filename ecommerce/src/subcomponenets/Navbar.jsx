@@ -5,11 +5,13 @@ import { FaCartArrowDown } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { ProductContext } from "../context/ProductContext";
 import Modal from "./Modal";
+import ProfileModal from "../subcomponenets/Profile_Modal"
 import Log_Sin_model from "./Log_Sin_model";
+import { Authcontext } from "../context/AuthContext";
 function Navbar() {
   const [open ,Setopen] =  useState(false)
   const {item} = useContext(ProductContext)
-
+  const {token,logout} = useContext(Authcontext)
   
   return (
     <div className="nav-main">
@@ -37,11 +39,12 @@ function Navbar() {
         </NavLink>
       </div>
       <div onClick={()=> Setopen(!open)}>
-        singup
+        {token ? ("profile") :("Signup")}
       </div>
       {open ? (<Modal onClose={() => Setopen(!open)}>
-        <Log_Sin_model/>
+       {token ? ( <ProfileModal onlogout = {logout}/>):(<Log_Sin_model/>)} 
       </Modal>):null}
+     
     </div>
   );
 }

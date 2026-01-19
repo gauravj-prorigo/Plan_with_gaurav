@@ -1,0 +1,39 @@
+.profile-modal-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-modal-box {
+  width: 250px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* profile icon */
+.profile-icon {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+/* username */
+.profile-username {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* logout button */
+.logout-btn {
+  padding: 8px 12px;
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}

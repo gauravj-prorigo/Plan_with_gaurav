@@ -16,8 +16,13 @@ describe("dummy testing ", () => {
       json: ()=> Promise.resolve(mockdata),
     })
   );
-  test("first test of dummy componnet", async () => {
+
+  test("Check api called or not",()=>{
     render(<Dummy />);
-    expect(await screen.findByText(/sunt aut facere/i)).toBeInTheDocument()
+    expect(global.fetch).toHaveBeenCalled()
+  })
+  test("check data is on ui or not", async () => {
+    render(<Dummy />);
+    expect(await screen.findByText(/excepturi opti/i)).toBeInTheDocument()
   });
 });
